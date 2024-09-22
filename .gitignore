@@ -1,0 +1,71 @@
+# Node.js related
+cms/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Virtual Environment related (Python)
+venv/
+myproject/
+ENV/
+env/
+.venv/
+.env
+
+# Python related
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django related
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+.coverage
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS related
+.DS_Store
+
+# Windows related
+Thumbs.db
