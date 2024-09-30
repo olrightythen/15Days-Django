@@ -5,7 +5,6 @@ yarn-error.log
 
 # Virtual Environment related (Python)
 venv/
-myproject/
 ENV/
 env/
 .venv/

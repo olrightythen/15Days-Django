@@ -1,1 +1,46 @@
-<h1> This is edit blog page </h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    {% load static %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    {% include '../components/_navbar.html' %}
+
+    <div
+      class="w-full p-8 my-8 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 m-auto rounded-2xl shadow-2xl"
+    >
+      <div class="flex">
+        <h1 class="font-bold uppercase text-5xl">Edit a Blog</h1>
+      </div>
+      <div class="grid grid-cols-1 gap-5 mt-5">
+        <input
+          class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Title*"
+        />
+        <input
+          class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Subtitle*"
+        />
+      </div>
+      <div class="my-4">
+        <textarea
+          placeholder="Description*"
+          class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+        ></textarea>
+      </div>
+      <div class="my-2 w-1/2 lg:w-1/4">
+        <button
+          class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+        >
+          Edit Blog
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

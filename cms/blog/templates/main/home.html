@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     {% load static %}
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
   </head>
   <body>
-    <h1 class="text-blue-500">Home</h1>
-    <p class="text-red-500">Welcome to the home page.</p>
+    {% include '../components/_navbar.html' %}
+    <div class="flex flex-wrap gap-8 my-8 justify-center items-center">
+      {% for Blog in Blogs %}
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <img
+          class="w-full"
+          src="{{ Blog.image.url }}"
+          alt="{{ Blog.title }}"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">{{ Blog.title }}</div>
+          <p class="text-gray-700 text-base">{{ Blog.description }}</p>
+        </div>
+        
+      </div>
+      {% endfor %}
+    </div>
   </body>
 </html>
