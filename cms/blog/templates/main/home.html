@@ -10,18 +10,20 @@
   <body>
     {% include '../components/_navbar.html' %}
     <div class="flex flex-wrap gap-8 my-8 justify-center items-center">
-      {% for Blog in Blogs %}
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      {% for blog in blogs %}
+      <div
+        class="max-w-sm rounded overflow-hidden shadow-lg"
+        onclick="window.location.href='/blog/{{ blog.id }}'"
+      >
         <img
-          class="w-full"
-          src="{{ Blog.image.url }}"
-          alt="{{ Blog.title }}"
+          class="w-64 h-64 object-cover"
+          src="{{ blog.image.url }}"
+          alt="{{ blog.title }}"
         />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">{{ Blog.title }}</div>
-          <p class="text-gray-700 text-base">{{ Blog.description }}</p>
+          <div class="font-bold text-xl mb-2">{{ blog.title }}</div>
+          <p class="text-gray-700 font-semibold text-base">{{ blog.subtitle }}</p>
         </div>
-        
       </div>
       {% endfor %}
     </div>

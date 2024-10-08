@@ -77,11 +77,11 @@ WSGI_APPLICATION = "cms.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "15daysdjango",
-        "Host": "localhost",
+        "NAME": "railway",
+        "HOST": "junction.proxy.rlwy.net",
         "USER": "root",
-        "PASSWORD": "",
-        "PORT": "3306",
+        "PASSWORD": "AlQVwjjpaQaMQJoKzBbtEHjsEWUzHOBU",
+        "PORT": "16527",
     }
 }
 
